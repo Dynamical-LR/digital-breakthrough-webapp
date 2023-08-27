@@ -66,7 +66,7 @@ export default class FormStore {
         formData.set('social_media_type', this.socialMediaType);
         formData.set('file', this.selectedFile!);
 
-        axios.post('http://localhost:8080/api/analyze', formData)
+        axios.post('/api/analyze', formData)
             .then((res) => {
                 this.receivedData = res.data;
                 this.loading = false;
